@@ -30,6 +30,7 @@ END
 end
 
 server.mount_proc '/' do |req, res|
+  p req.body
   case req.path
   when '/'
     contr = ExampleController.new(req, res).create
